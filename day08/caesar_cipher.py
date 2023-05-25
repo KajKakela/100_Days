@@ -32,11 +32,9 @@ def encode_decode(process):
             else:
                 new_message_list.append(alphabets[x-shift_number])
 
-        elif letter == " ":
-            new_message_list.append(" ")
-        
         else:
-            continue
+            new_message_list.append(letter)
+
     
     
     new_message = "".join(new_message_list)
