@@ -8,12 +8,10 @@ alphabets += alphabets
 def main():
     choice = input("Type 'encode' to encrypt, 'decode' to decrypt:\n").lower()
 
-    while choice != "encode" or choice != "decode":
-        if choice == "encode" or choice == "decode":
-            encode_decode(choice)
-        else:
-            choice = input("Type 'encode' to encrypt, 'decode' to decrypt:\n").lower()
-            
+    while choice != "encode" and choice != "decode":
+        choice = input("Type 'encode' to encrypt, 'decode' to decrypt:\n").lower()
+
+    encode_decode(choice)
 
 
 def encode_decode(process):
@@ -44,7 +42,7 @@ def encode_decode(process):
     new_message = "".join(new_message_list)
     print(f"Here's the encoded result: {new_message}")
 
-    choice = input("\nType 'yes' if you want to go again, otherwise type 'no':\n")
+    choice = input("\nType 'yes' if you want to go again:\n")
 
     if choice == "yes":
         main()
